@@ -21,8 +21,10 @@ import scala.collection.immutable.Queue
 import scala.concurrent.ExecutionContext
 import scala.concurrent.duration._
 import scala.util.Random
+import org.scalatest.flatspec.{AnyFlatSpec, AnyFlatSpecLike}
+import org.scalatest.matchers.should.Matchers
 
-class PipelinesApiRequestManagerSpec extends TestKitSuite("PipelinesApiRequestManagerSpec") with FlatSpecLike with Matchers with Eventually {
+class PipelinesApiRequestManagerSpec extends TestKitSuite("PipelinesApiRequestManagerSpec") with AnyFlatSpecLike with Matchers with Eventually {
 
   behavior of "PipelinesApiRequestManager"
 

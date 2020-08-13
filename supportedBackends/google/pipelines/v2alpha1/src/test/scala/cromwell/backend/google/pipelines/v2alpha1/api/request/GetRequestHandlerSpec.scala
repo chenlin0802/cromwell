@@ -15,8 +15,10 @@ import cromwell.core.{ExecutionEvent, WorkflowId}
 import io.grpc.Status
 import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class GetRequestHandlerSpec extends FlatSpec with Matchers with TableDrivenPropertyChecks {
+class GetRequestHandlerSpec extends AnyFlatSpec with Matchers with TableDrivenPropertyChecks {
 
   behavior of "GetRequestHandler"
 

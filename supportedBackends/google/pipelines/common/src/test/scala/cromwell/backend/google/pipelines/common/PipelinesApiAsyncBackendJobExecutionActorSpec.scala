@@ -49,9 +49,11 @@ import scala.concurrent.duration._
 import scala.concurrent.{Await, ExecutionContext, Future, Promise}
 import scala.language.postfixOps
 import scala.util.Success
+import org.scalatest.flatspec.{AnyFlatSpec, AnyFlatSpecLike}
+import org.scalatest.matchers.should.Matchers
 
 class PipelinesApiAsyncBackendJobExecutionActorSpec extends TestKitSuite("JesAsyncBackendJobExecutionActorSpec")
-  with FlatSpecLike with Matchers with ImplicitSender with Mockito with BackendSpec with BeforeAndAfter with DefaultJsonProtocol {
+  with AnyFlatSpecLike with Matchers with ImplicitSender with Mockito with BackendSpec with BeforeAndAfter with DefaultJsonProtocol {
   val mockPathBuilder: GcsPathBuilder = MockGcsPathBuilder.instance
   import MockGcsPathBuilder._
   var kvService: ActorRef = system.actorOf(Props(new InMemoryKvServiceActor))

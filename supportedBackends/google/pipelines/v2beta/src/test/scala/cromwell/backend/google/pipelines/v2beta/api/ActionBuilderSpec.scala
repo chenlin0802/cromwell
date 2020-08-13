@@ -9,8 +9,10 @@ import org.scalatest.prop.TableDrivenPropertyChecks
 import org.scalatest.{FlatSpec, Matchers}
 
 import scala.collection.JavaConverters._
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class ActionBuilderSpec extends FlatSpec with Matchers with TableDrivenPropertyChecks {
+class ActionBuilderSpec extends AnyFlatSpec with Matchers with TableDrivenPropertyChecks {
 
   behavior of "ActionBuilder"
 
