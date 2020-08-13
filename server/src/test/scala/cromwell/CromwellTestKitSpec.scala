@@ -27,11 +27,12 @@ import cromwell.services.ServiceRegistryActor
 import cromwell.services.metadata.MetadataService._
 import cromwell.subworkflowstore.EmptySubWorkflowStoreActor
 import cromwell.util.SampleWdl
-import cromwell.services._
 import org.scalactic.Equality
 import org.scalatest._
 import org.scalatest.concurrent.{Eventually, ScalaFutures}
+import org.scalatest.matchers.should.Matchers
 import org.scalatest.time.{Millis, Seconds, Span}
+import org.scalatest.wordspec.AnyWordSpecLike
 import spray.json._
 import wom.core.FullyQualifiedName
 import wom.types._
@@ -256,7 +257,7 @@ object CromwellTestKitSpec {
   def defaultTwms = new CromwellTestKitSpec.TestWorkflowManagerSystem()
 }
 
-abstract class CromwellTestKitWordSpec extends CromwellTestKitSpec with WordSpecLike
+abstract class CromwellTestKitWordSpec extends CromwellTestKitSpec with AnyWordSpecLike
 abstract class CromwellTestKitSpec(val twms: TestWorkflowManagerSystem = defaultTwms) extends TestKit(twms.actorSystem)
   with DefaultTimeout with ImplicitSender with Matchers with ScalaFutures with Eventually with Suite with OneInstancePerTest with BeforeAndAfterAll {
 

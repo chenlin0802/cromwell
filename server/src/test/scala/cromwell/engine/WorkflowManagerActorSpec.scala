@@ -11,7 +11,6 @@ import wom.core.{ExecutableInputMap, WorkflowSource}
 import scala.concurrent.duration._
 import scala.language.postfixOps
 
-
 class WorkflowManagerActorSpec extends CromwellTestKitWordSpec with WorkflowDescriptorBuilderForSpecs {
   override implicit val actorSystem = system
 

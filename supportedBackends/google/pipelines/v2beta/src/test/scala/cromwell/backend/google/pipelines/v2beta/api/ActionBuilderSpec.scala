@@ -5,12 +5,11 @@ import java.util
 import com.google.api.services.lifesciences.v2beta.model.{Action, Mount}
 import cromwell.backend.google.pipelines.v2beta.LifeSciencesFactory
 import cromwell.backend.google.pipelines.v2beta.api.ActionBuilder.Labels.{Key, Value}
-import org.scalatest.prop.TableDrivenPropertyChecks
-import org.scalatest.{FlatSpec, Matchers}
-
-import scala.collection.JavaConverters._
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
+import org.scalatest.prop.TableDrivenPropertyChecks
+
+import scala.collection.JavaConverters._
 
 class ActionBuilderSpec extends AnyFlatSpec with Matchers with TableDrivenPropertyChecks {
 
