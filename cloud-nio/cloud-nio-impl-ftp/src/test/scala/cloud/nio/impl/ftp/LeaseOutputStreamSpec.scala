@@ -3,12 +3,11 @@ package cloud.nio.impl.ftp
 import java.io.OutputStream
 
 import org.apache.commons.net.ftp.FTPClient
-import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 import org.specs2.mock.Mockito
 
 import scala.concurrent.duration._
-import org.scalatest.flatspec.AnyFlatSpec
-import org.scalatest.matchers.should.Matchers
 
 
 class LeaseOutputStreamSpec extends AnyFlatSpec with Matchers with Mockito {
