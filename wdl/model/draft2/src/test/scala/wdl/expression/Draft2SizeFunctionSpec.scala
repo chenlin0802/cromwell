@@ -10,8 +10,10 @@ import wom.values._
 
 import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class Draft2SizeFunctionSpec extends FlatSpec with Matchers {
+class Draft2SizeFunctionSpec extends AnyFlatSpec with Matchers {
 
   behavior of "ReadLikeFunctions.size"
 

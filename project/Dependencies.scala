@@ -98,6 +98,7 @@ object Dependencies {
   private val scalameterV = "0.19"
   private val scalamockV = "4.4.0"
   private val scalatestV = "3.2.1"
+  private val scalatestPlusMockitoV = "1.0.0-M2"
   private val scalazV = "7.2.30"
   private val scoptV = "3.7.1"
   private val sentryLogbackV = "1.7.30"
@@ -559,6 +560,7 @@ object Dependencies {
 
   val testDependencies = List(
     "org.scalatest" %% "scalatest" % scalatestV,
+    "org.scalatestplus" %% "scalatestplus-mockito" % scalatestPlusMockitoV,
     "org.pegdown" % "pegdown" % pegdownV,
     "org.specs2" %% "specs2-mock" % specs2MockV,
     "com.dimafeng" %% "testcontainers-scala-scalatest" % testContainersScalaV,
