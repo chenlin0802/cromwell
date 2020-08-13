@@ -4,8 +4,10 @@ import java.io.FileNotFoundException
 
 import better.files.File
 import org.scalatest.{FlatSpec, Matchers}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class ServiceAccountModeSpec extends FlatSpec with Matchers {
+class ServiceAccountModeSpec extends AnyFlatSpec with Matchers {
 
   behavior of "ServiceAccountMode"
 
