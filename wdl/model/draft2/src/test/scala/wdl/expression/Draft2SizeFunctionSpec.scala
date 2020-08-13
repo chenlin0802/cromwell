@@ -1,6 +1,8 @@
 package wdl.expression
 
-import org.scalatest.{Assertion, FlatSpec, Matchers}
+import org.scalatest.Assertion
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 import wdl.draft2.model.expression.WdlStandardLibraryFunctions
 import wdl.expression.Draft2SizeFunctionSpec.testFunctions
 import wdl.shared.FileSizeLimitationConfig
@@ -10,8 +12,6 @@ import wom.values._
 
 import scala.concurrent.Future
 import scala.util.{Failure, Success, Try}
-import org.scalatest.flatspec.AnyFlatSpec
-import org.scalatest.matchers.should.Matchers
 
 class Draft2SizeFunctionSpec extends AnyFlatSpec with Matchers {
 
