@@ -1,14 +1,15 @@
 package cromwell.backend
 
-import _root_.wdl.draft2.model.types._
 import _root_.wdl.draft2.model.WdlExpression
+import _root_.wdl.draft2.model.types._
 import akka.actor.ActorRef
 import akka.testkit.TestActorRef
 import com.typesafe.config.ConfigFactory
 import cromwell.backend.validation.{ContinueOnReturnCodeFlag, ContinueOnReturnCodeSet, ContinueOnReturnCodeValidation}
 import cromwell.core.{TestKitSuite, WorkflowOptions}
+import org.scalatest.flatspec.AnyFlatSpecLike
+import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.TableDrivenPropertyChecks
-import org.scalatest.{FlatSpecLike, Matchers}
 import wom.RuntimeAttributesKeys
 import wom.expression.WomExpression
 import wom.graph.CommandCallNode
@@ -17,8 +18,7 @@ import wom.values._
 
 import scala.concurrent.Future
 import scala.util.Try
-import org.scalatest.flatspec.{AnyFlatSpec, AnyFlatSpecLike}
-import org.scalatest.matchers.should.Matchers
+
 
 class BackendWorkflowInitializationActorSpec extends TestKitSuite("BackendWorkflowInitializationActorSpec")
   with AnyFlatSpecLike with Matchers with TableDrivenPropertyChecks {

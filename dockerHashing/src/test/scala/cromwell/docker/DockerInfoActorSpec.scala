@@ -5,12 +5,12 @@ import cromwell.docker.DockerInfoActor._
 import cromwell.docker.registryv2.flows.dockerhub.DockerHubRegistry
 import cromwell.docker.registryv2.flows.gcr.GcrRegistry
 import cromwell.docker.registryv2.flows.quay.QuayRegistry
-import org.scalatest.{BeforeAndAfterAll, FlatSpecLike, Matchers}
+import org.scalatest.BeforeAndAfterAll
+import org.scalatest.flatspec.AnyFlatSpecLike
+import org.scalatest.matchers.should.Matchers
 
 import scala.concurrent.duration._
 import scala.language.postfixOps
-import org.scalatest.flatspec.{AnyFlatSpec, AnyFlatSpecLike}
-import org.scalatest.matchers.should.Matchers
 
 class DockerInfoActorSpec extends DockerRegistrySpec("DockerHashActorSpec") with AnyFlatSpecLike with Matchers with BeforeAndAfterAll {
   behavior of "DockerRegistryActor"
