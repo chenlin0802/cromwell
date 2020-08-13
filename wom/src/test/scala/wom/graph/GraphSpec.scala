@@ -9,8 +9,11 @@ import wom.callable.{CallableTaskDefinition, WorkflowDefinition}
 import wom.graph.CallNode.{CallNodeAndNewNodes, CallNodeBuilder, InputDefinitionFold, InputDefinitionPointer}
 import wom.graph.GraphNodePort.OutputPort
 import wom.types.{WomSingleFileType, WomIntegerType, WomStringType}
+import org.scalatest.flatspec.AnyFlatSpec
+import org.scalatest.matchers.should.Matchers
 
-class GraphSpec extends FlatSpec with Matchers {
+
+class GraphSpec extends AnyFlatSpec with Matchers {
   behavior of "Graph"
 
   def makeThreeStep: Graph = {
