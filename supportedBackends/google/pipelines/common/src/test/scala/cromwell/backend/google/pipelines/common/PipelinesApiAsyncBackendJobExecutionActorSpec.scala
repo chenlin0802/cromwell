@@ -31,6 +31,8 @@ import cromwell.services.keyvalue.KeyValueServiceActor.{KvGet, KvJobKey, KvPair,
 import cromwell.util.JsonFormatting.WomValueJsonFormatter._
 import cromwell.util.SampleWdl
 import org.scalatest._
+import org.scalatest.flatspec.AnyFlatSpecLike
+import org.scalatest.matchers.should.Matchers
 import org.scalatest.prop.Tables.Table
 import org.slf4j.Logger
 import org.specs2.mock.Mockito
@@ -49,8 +51,6 @@ import scala.concurrent.duration._
 import scala.concurrent.{Await, ExecutionContext, Future, Promise}
 import scala.language.postfixOps
 import scala.util.Success
-import org.scalatest.flatspec.{AnyFlatSpec, AnyFlatSpecLike}
-import org.scalatest.matchers.should.Matchers
 
 class PipelinesApiAsyncBackendJobExecutionActorSpec extends TestKitSuite("JesAsyncBackendJobExecutionActorSpec")
   with AnyFlatSpecLike with Matchers with ImplicitSender with Mockito with BackendSpec with BeforeAndAfter with DefaultJsonProtocol {

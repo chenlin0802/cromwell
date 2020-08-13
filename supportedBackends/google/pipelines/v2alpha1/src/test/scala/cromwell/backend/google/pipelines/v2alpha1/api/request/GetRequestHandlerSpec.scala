@@ -13,10 +13,9 @@ import cromwell.backend.standard.StandardAsyncJob
 import cromwell.cloudsupport.gcp.auth.GoogleAuthMode
 import cromwell.core.{ExecutionEvent, WorkflowId}
 import io.grpc.Status
-import org.scalatest.prop.TableDrivenPropertyChecks
-import org.scalatest.{FlatSpec, Matchers}
 import org.scalatest.flatspec.AnyFlatSpec
 import org.scalatest.matchers.should.Matchers
+import org.scalatest.prop.TableDrivenPropertyChecks
 
 class GetRequestHandlerSpec extends AnyFlatSpec with Matchers with TableDrivenPropertyChecks {
 
