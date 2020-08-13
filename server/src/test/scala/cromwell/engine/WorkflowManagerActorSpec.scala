@@ -6,6 +6,7 @@ import cromwell.core._
 import cromwell.engine.workflow.WorkflowDescriptorBuilderForSpecs
 import cromwell.util.{SampleWdl, WorkflowImport}
 import cromwell.{CromwellTestKitSpec, CromwellTestKitWordSpec}
+import org.scalatest.enablers.Retrying
 import wom.core.{ExecutableInputMap, WorkflowSource}
 
 import scala.concurrent.duration._
@@ -88,7 +89,7 @@ class WorkflowManagerActorSpec extends CromwellTestKitWordSpec with WorkflowDesc
       val firstSources = SubWorkflows(naptime = 60 seconds).asWorkflowSources()
 
       def waitForState(workflowId: WorkflowId, state: WorkflowState): Unit = {
-        eventually { verifyWorkflowState(serviceRegistryActor, workflowId, state) } (config = defaultPatience, pos = implicitly[org.scalactic.source.Position])
+        eventually { verifyWorkflowState(serviceRegistryActor, workflowId, state) } (config = defaultPatience, pos = implicitly[org.scalactic.source.Position], retrying = implicitly[Retrying[Unit]])
       }
 
       val firstWorkflowId = rootActor.underlyingActor.submitWorkflow(firstSources)
