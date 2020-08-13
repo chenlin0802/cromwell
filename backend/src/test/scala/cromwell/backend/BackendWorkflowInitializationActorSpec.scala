@@ -17,9 +17,11 @@ import wom.values._
 
 import scala.concurrent.Future
 import scala.util.Try
+import org.scalatest.flatspec.{AnyFlatSpec, AnyFlatSpecLike}
+import org.scalatest.matchers.should.Matchers
 
 class BackendWorkflowInitializationActorSpec extends TestKitSuite("BackendWorkflowInitializationActorSpec")
-  with FlatSpecLike with Matchers with TableDrivenPropertyChecks {
+  with AnyFlatSpecLike with Matchers with TableDrivenPropertyChecks {
 
   behavior of "BackendWorkflowInitializationActorSpec"
 
